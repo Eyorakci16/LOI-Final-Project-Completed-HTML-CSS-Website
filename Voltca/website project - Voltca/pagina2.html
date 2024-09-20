@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kemer Resort</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!--Header-->
+<header>
+    <a href="index.html" id="logo">
+        <img src="img/logo.png" alt="Logo">
+        <span class="logo-text">Voltca</span>
+    </a>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pagina1.html">Kemer Resort</a></li>
+            <li><a href="pagina2.html"class="active">Passalackua</a></li>
+            <li><a href="pagina3.html">Rozewood Hong Kong</a></li>
+            <li><a href="pagina4.html">Amaan Tokyo</a></li>
+            <li>
+                <a href="#">Meer</a>
+                <ul class="submenu">
+                    <li><a href="subpagina1.html">Over&nbsp;Voltca</a></li>
+                    <li><a href="subpagina2.html">Boeking&nbsp;annuleren</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Hoofdcontent -->
+<main>
+    <section class="intro-pagina1">
+        <div class="intro-item-pagina1">
+            <h1>Passalackua</h1>
+            <p>Italië</p>
+        </div>
+    </section>
+
+    <!-- Grid Layout -->
+    <section class="grid-layout-pagina1">
+        <div class="grid-item-pagina1">
+            <h1>De beste tijd om het Comomeer te bezoeken? Elk seizoen.</h1>
+            <p>Lente, wanneer bloesem de lucht vult en witte penseelstreken schildert op de groene heuvels boven het kobaltblauwe water. Zomer, wanneer lange, luie dagen overgaan in magische nachten vol belofte. Herfst, wanneer de bossen getint zijn met roest- en koperkleuren, en geurige truffels en groen-gouden olijfolie de tafel verrijken. Een 5-sterrenhotel aan het Comomeer met warme, persoonlijke service, Passalacqua is jouw toegangspoort tot een regio voor alle seizoenen.</p>
+            <h2>Een vleugje La Dolce Vita</h2>
+            <p>In vroeger tijden wisten ze al dat zwembaden voor zwemmers ook stijlvol konden zijn. Gelegen op een tuinterras net onder de hoofdvilla, omgeven door oude klimrozen en een prachtige laurierboom, leent la piscina zich zowel voor sportieve baantjes als voor ontspannen duiken.</p>
+            <h3>La villeggiatura is een prachtige Italiaanse traditie...</h3>
+            <p>Maar het is ook een gemoedstoestand, een die een broodnodige correctie biedt op de haastige vakanties van vandaag. Eeuwen geleden verhuisden adellijke Italiaanse families voor het hele lange zomerseizoen van hun stadshuis naar een landhuis, samen met vrienden, helpers en familieleden. Het was een jaarlijkse reset, een langverwachte periode van vreugdevolle ontmoetingen, vermaak en mogelijkheden voor persoonlijke verrijking. Bij Passalacqua leeft la villeggiatura voort.</p>
+            <h3>Onze Suites</h3>
+            <p>Passalackua's drie sferen: Villa, Palazzo, Casa al Lago. PassalacKua's unieke karakter: een stijlvolle kamer voor jezelf, waar elk detail zorgvuldig is uitgekozen en aan al je wensen wordt voldaan.</p>
+        </div>
+    </section>
+
+    <!-- Flexbox -->
+    <section class="flex-layout">
+        <div class="flex-item"><img src="img/Passalackua1.jpg" alt="Passalackua 1"></div>
+        <div class="flex-item"><img src="img/Passalackua2.jpg" alt="Passalackua 2"></div>
+        <div class="flex-item"><img src="img/Passalackua3.jpg" alt="Passalackua 3"></div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-form1">
+        <div class="contact-item-form1">
+            <h1>Contactformulier</h1>
+            <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
+                <label for="firstName">Voornaam:</label><br>
+                <input type="text" id="firstName" name="firstName" pattern="[A-Za-z\s]{2,50}" title="Voornaam moet alleen letters bevatten, minimaal 2 en maximaal 50 karakters." required><br><br>
+
+                <label for="middleName">Tussenvoegsel:</label><br>
+                <input type="text" id="middleName" name="middleName" pattern="[A-Za-z\s]{0,10}" title="Tussenvoegsel mag alleen letters bevatten en maximaal 10 karakters." ><br><br>
+
+                <label for="lastName">Achternaam:</label><br>
+                <input type="text" id="lastName" name="lastName" pattern="[A-Za-z\s\-]{2,50}" title="Achternaam moet alleen letters bevatten, kan streepjes bevatten, minimaal 2 en maximaal 50 karakters." required><br><br>
+
+                <label for="address">Adres:</label><br>
+                <input type="text" id="address" name="address" pattern="[A-Za-z0-9\s\-]{5,100}" title="Adres moet minimaal 5 karakters bevatten, en kan cijfers, letters en streepjes bevatten." required><br><br>
+
+                <label for="zipCode">Postcode:</label><br>
+                <input type="text" id="zipCode" name="zipCode" pattern="[1-9][0-9]{3}\s?[A-Za-z]{2}" title="Voer een geldige postcode in (bijv. 1234 AB)" required><br><br>
+
+                <label for="email">E-mailadres:</label><br>
+                <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Voer een geldig e-mailadres in (bijv. naam@domein.com)" required><br><br>
+
+                <label for="phone">Telefoonnummer:</label><br>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Voer een geldig telefoonnummer in van 10 cijfers" required><br><br>
+
+                <label for="paymentMethod">Betaalmethode:</label><br>
+                <select id="paymentMethod" name="paymentMethod" required>
+                    <option value="">Kies een betaalmethode</option>
+                    <option value="ideal">iDEAL</option>
+                    <option value="creditcard">Creditcard</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bankoverschrijving">Bankoverschrijving</option>
+                </select><br><br>
+
+                <label for="comments">Opmerkingen:</label><br>
+                <textarea id="comments" name="comments" rows="4" cols="50" pattern=".{0,500}" title="Opmerkingen mogen maximaal 500 karakters bevatten." ></textarea><br><br>
+
+                <input type="submit" value="Boeken">
+            </form>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Mijn Website. Alle rechten voorbehouden.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

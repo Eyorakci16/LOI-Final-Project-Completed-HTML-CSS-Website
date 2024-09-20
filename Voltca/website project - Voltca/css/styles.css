@@ -1,0 +1,224 @@
+:root {
+    --main-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #fff;
+    --background-color: #f4f4f4;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color);
+    width: 75px;
+}
+
+#logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.logo-text {
+    position: absolute;
+    bottom: 5px; 
+    left: 5px;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* General Styles */
+
+.intro, .intro-pagina1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.intro-item, .intro-item-pagina1 {
+    background-color: #f0f0f0; 
+    padding: 20px;
+    color: #333;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+nav ul li .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--main-color);
+    padding: 10px;
+}
+
+nav ul li:hover .submenu {
+    display: block;
+}
+
+main {
+    padding: 20px;
+}
+
+.grid-layout, .grid-layout-pagina1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.grid-item, .grid-item-pagina1 {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.flex-layout {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.flex-item {
+    background-color: #34495e;
+    color: var(--text-color);
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+/* Video Wrapper */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; 
+    overflow: hidden;
+    background: #000;
+}
+
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+footer {
+    background-color: #333;
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .flex-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-item {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-layout {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .flex-item {
+        width: 30%;
+    }
+}
+
+/* Contact Form Styles */
+
+.contact-form1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.contact-item-form1 {
+    background-color: #333;
+    padding: 20px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select {
+    width: 100%; 
+    padding: 6px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%; 
+    padding: 8px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px; 
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Add focus styles for accessibility */
+input:focus, textarea:focus, select:focus {
+    outline: 2px solid var(--main-color);
+    outline-offset: 2px;
+}

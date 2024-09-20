@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" id="logo" aria-label="Terug naar home">
+            <img src="img/logo.png" alt="Logo Mijn Website">
+            <span class="logo-text">Voltca</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pagina1.html">Kemer Resort</a></li>
+                <li><a href="pagina2.html">Passalackua</a></li>
+                <li><a href="pagina3.html">Rozewood Hong Kong</a></li>
+                <li><a href="pagina4.html">Amaan Tokyo</a></li>
+                <li>
+                    <a href="#">Meer</a>
+                    <ul class="submenu">
+                        <li><a href="subpagina1.html">Over&nbsp;Voltca</a></li>
+                        <li><a href="subpagina2.html">Boeking&nbsp;annuleren</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>               
+        <section class="contact-form">
+            <h1>Contact</h1>
+            <form action="https://jkorpela.fi/cgi-bin/echo.cgi" method="post">
+                <label for="name">Naam (verplicht):</label>
+                <input type="text" id="name" name="name" required aria-required="true">
+
+                <label for="email">E-mail (verplicht):</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+
+                <label for="phone">Telefoonnummer:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Voer een 10-cijferig telefoonnummer in (alleen cijfers)">
+
+                <label for="message">Bericht (verplicht):</label>
+                <textarea id="message" name="message" required aria-required="true"></textarea>
+
+                <button type="submit">Verstuur</button>
+            </form>
+        </section>
+
+        <section class="map">
+            <h2>Onze Locatie</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d155959.26467788246!2d4.739152714925784!3d52.354760727134995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c63fb5949a7755%3A0x6600fd4cb7c0af8d!2sAmsterdam!5e0!3m2!1str!2snl!4v1725826241625!5m2!1str!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mijn Website. Alle rechten voorbehouden.</p>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
